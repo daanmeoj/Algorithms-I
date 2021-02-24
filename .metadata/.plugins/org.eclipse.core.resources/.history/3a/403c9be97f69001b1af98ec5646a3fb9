@@ -1,0 +1,11 @@
+package buildingAQueue;
+
+public class Queue {
+	private int[] items;
+	private int count;
+	
+	public Queue() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

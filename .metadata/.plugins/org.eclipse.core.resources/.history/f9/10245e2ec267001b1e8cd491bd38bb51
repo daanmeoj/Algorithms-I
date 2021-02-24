@@ -1,0 +1,15 @@
+
+public class LinkedList {
+	private Node first;
+	private Node last;
+	
+	public class Node {
+		private int value;
+		private Node next;
+	}
+
+	public void addLast(int item) {
+		Node node=new Node();
+		node.value=item;
+	}
+}

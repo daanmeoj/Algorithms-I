@@ -1,0 +1,59 @@
+package buildingAQueue;
+
+import java.util.Arrays;
+
+public class Queue {
+	private int[] items;
+	private int count,R,F;
+	
+	
+	
+	public Queue(int capacity) {
+		// TODO Auto-generated constructor stub
+		items=new int[capacity];
+		F=0;
+		R=0;
+		count=0;
+	}
+	
+	public void enqueue(int item) {
+		if(count==items.length)
+			throw new StackOverflowError();
+		items[R]=item;
+		count++;
+		if(count!=items.length) {
+			R++;
+		}
+		
+	}
+	
+	public int dequeue() {
+        if(F==items.length-1) {
+        	throw new StackOverflowError();
+        }
+        return items[F++];
+
+	}
+	
+
+	
+	public boolean isEmpty() {
+		return count==0;
+	}
+	
+	public void print() {
+	
+		for(int i=F;i<R;i++) {
+			System.out.println(items[i]);
+		}
+		System.out.println("F: "+F);
+		System.out.println("R: "+R);
+
+	}
+	
+	@Override
+	public String toString() {
+		int[] content=Arrays.copyOfRange(items, 0, count);
+		return Arrays.toString(content);
+	}
+}

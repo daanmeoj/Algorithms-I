@@ -1,0 +1,50 @@
+
+public class LinkedList {
+	private Node first;
+	private Node last;
+	
+	private class Node {
+		private int value;
+		private Node next;
+		Node(int value){
+			this.value=value;
+		}
+	}
+	public void addLast(int item) {
+		Node node=new Node(item);
+		if(isEmpty()) 
+			first=last=node;
+		else {
+			last.next=node;
+			last=node;
+		}
+		
+	}
+	
+	public void addFirst(int item) {
+		Node node=new Node(item);
+		if(isEmpty()) 
+			first=last=node;
+		else {
+			node.next=first;
+			first=node;
+		}
+
+	}
+	
+	public int indexOF(int item) {
+		Node node;
+		node=first;
+		int value;
+		while(node!=last) {
+			value=node.value;
+			System.out.println(value);
+			node=node.next;
+		}
+return 0;
+	}
+	
+	private boolean isEmpty() {
+		return first==null;
+	}
+}

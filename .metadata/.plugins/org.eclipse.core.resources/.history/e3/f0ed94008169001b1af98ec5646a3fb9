@@ -1,0 +1,14 @@
+package buildingAQueue;
+
+public class Queue {
+	private int[] items;
+	private int count, F,R;
+	
+	public Queue() {
+		// TODO Auto-generated constructor stub
+		items=new int[10];
+		F=1;
+		R=9;
+	}
+
+}

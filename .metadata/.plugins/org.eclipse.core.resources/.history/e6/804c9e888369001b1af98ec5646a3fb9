@@ -1,0 +1,24 @@
+package buildingAQueue;
+
+public class Queue {
+	private int[] items;
+	private int count,R;
+	
+	public Queue() {
+		// TODO Auto-generated constructor stub
+		items=new int[10];
+	}
+	
+	public void enqueue(int item) {
+		items[count++]=item;
+//		R=item;
+//		System.out.println(R);
+	}
+	
+	public void print() {
+		for(int i=0;i<count;i++) {
+			System.out.println(items[i]);
+		}
+
+	}
+}

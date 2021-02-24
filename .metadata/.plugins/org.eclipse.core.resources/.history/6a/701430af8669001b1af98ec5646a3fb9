@@ -1,0 +1,51 @@
+package buildingAQueue;
+
+public class Queue {
+	private int[] items;
+	private int count,R,F;
+	
+	public Queue() {
+		// TODO Auto-generated constructor stub
+		items=new int[10];
+	}
+	
+	public void enqueue(int item) {
+		if(count==10) {
+			throw new StackOverflowError();
+		}
+		if(count==0) {
+			F=0;
+			R=0;
+		}
+		else if(count!=1){
+			R++;
+		}
+		items[count++]=item;
+		
+	}
+	
+	public int dequeue() {
+		if(isEmpty()) {
+			F=0;
+			R=0;
+			throw new IllegalStateException();
+		}
+			
+		R--;
+		return items[--count];
+	}
+	
+	public boolean isEmpty() {
+		return count==0;
+	}
+	
+	public void print() {
+		for(int i=0;i<count;i++) {
+			System.out.println(items[i]);
+		}
+		System.out.println("F: "+F);
+		System.out.println("R: "+R);
+		System.out.println("count: "+count);
+
+	}
+}

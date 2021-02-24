@@ -1,0 +1,10 @@
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		HashTable table=new HashTable();
+		table.put(6,"A");
+	}
+
+}
